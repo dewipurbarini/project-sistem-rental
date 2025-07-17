@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Kendaraan</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4 bg-light">
+
+  <nav class="mb-4">
+    <a href="/dashboard" class="btn btn-outline-primary me-2">Dashboard</a>
+    <a href="/pelanggan" class="btn btn-outline-primary me-2">Pelanggan</a>
+    <a href="/kendaraan" class="btn btn-outline-primary me-2">Kendaraan</a>
+    <a href="/transaksi" class="btn btn-outline-primary me-2">Transaksi</a>
+    <a href="/report" class="btn btn-outline-primary">Laporan</a>
+  </nav>
+
+  <h2>{{if .ID}}Edit{{else}}Tambah{{end}} Kendaraan</h2>
+  <form method="post" action="{{if .ID}}/kendaraan/{{.ID}}{{else}}/kendaraan{{end}}" class="mt-3">
+    <div class="mb-3">
+      <label class="form-label">Tipe</label>
+      <select name="tipe" class="form-select">
+        <option value="mobil" {{if eq .Tipe "mobil"}}selected{{end}}>Mobil</option>
+        <option value="motor" {{if eq .Tipe "motor"}}selected{{end}}>Motor</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Merk</label>
+      <input name="merk" value="{{.Merk}}" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Nomor Polisi</label>
+      <input name="nomor_polisi" value="{{.NomorPolisi}}" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Harga Sewa</label>
+      <input type="number" name="harga_sewa" value="{{.HargaSewa}}" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Status</label>
+      <select name="status" class="form-select">
+        <option value="tersedia" {{if eq .Status "tersedia"}}selected{{end}}>Tersedia</option>
+        <option value="disewa" {{if eq .Status "disewa"}}selected{{end}}>Disewa</option>
+      </select>
+    </div>
+    <button class="btn btn-success mt-2">Simpan</button>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

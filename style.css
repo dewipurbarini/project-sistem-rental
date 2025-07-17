@@ -1,0 +1,128 @@
+/* === Base === */
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+/* === Navbar === */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #f8f9fa !important;
+}
+
+/* === Table === */
+.table {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.table td, .table th {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+/* === Buttons === */
+.btn {
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: #212529;
+}
+
+/* === Form Elements === */
+input.form-control,
+select.form-select,
+textarea.form-control {
+    border-radius: 6px;
+    border-color: #ced4da;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.25);
+}
+
+/* === Card-Like Panels === */
+.panel {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* === Footer === */
+footer {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* === Alerts === */
+.alert {
+    border-radius: 6px;
+}
+
+/* === Custom Layouts === */
+.mt-2  { margin-top: .5rem !important; }
+.mt-3  { margin-top: 1rem !important; }
+.mt-4  { margin-top: 1.5rem !important; }
+.mb-2  { margin-bottom: .5rem !important; }
+.mb-3  { margin-bottom: 1rem !important; }
+.mb-4  { margin-bottom: 1.5rem !important; }
+
+.text-muted {
+    color: #6c757d !important;
+}
